@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice Management</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Invoice Management</h1>
+        <form id="invoice-form">
+            <div class="form-group">
+                <label for="company">Company:</label>
+                <select id="company" required>
+                    <option value="" disabled selected>Select a Company</option>
+                    <option value="Google">Google</option>
+                    <option value="Amazon">Amazon</option>
+                    <option value="Microsoft">Microsoft</option>
+                    <option value="Apple">Apple</option>
+                    <option value="Tesla">Tesla</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="invoice">Invoice Number:</label>
+                <input type="text" id="invoice" placeholder="Enter Invoice Number" required>
+            </div>
+            <button type="submit" class="btn">Submit</button>
+        </form>
+        <button id="load-data-btn" class="btn">Load Invoice Data</button>
+        <table id="invoice-table">
+            <thead>
+                <tr>
+                    <th>Company</th>
+                    <th>Invoice</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="invoice-table-body">
+                <!-- Rows will be populated dynamically -->
+            </tbody>
+        </table>
+    </div>
+    <script src="/static/script.js"></script>
+</body>
+</html>
